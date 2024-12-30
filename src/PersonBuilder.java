@@ -27,6 +27,11 @@ public class PersonBuilder {
     }
 
     public Person build() {
+        if (name == null || surname == null) {
+            throw new IllegalArgumentException("Введите имя и фамилию");
+        } else if (age < 0 || age > 120) {
+            throw new IllegalArgumentException("Возраст не может быть больше 120 и меньше 0");
+        }
         Person person;
         if (ageEmpty) {
             person = new Person(name, surname, age);

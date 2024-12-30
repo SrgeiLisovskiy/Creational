@@ -3,13 +3,13 @@ public class Main {
         Person mom = new PersonBuilder()
                 .setName("Анна")
                 .setSurname("Вольф")
-                .setAge(31)
                 .setAddress("Сидней")
                 .build();
         Person son = mom.newChildBuilder()
                 .setName("Антошка")
                 .build();
         System.out.println("У " + mom + " есть сын, " + son);
+        System.out.println(mom.getAge());
 
         try {
             // Не хватает обяхательных полей
@@ -25,5 +25,4 @@ public class Main {
             e.printStackTrace();
         }
     }
-}
 }
