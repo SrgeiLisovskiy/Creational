@@ -9,20 +9,12 @@ public class Person {
     private boolean ageEmpty;
 
     public Person(String name, String surname, int age) {
-        if (name == null || surname == null) {
-            throw new IllegalArgumentException("Введите имя и фамилию");
-        } else if (age < 0 || age > 120) {
-            throw new IllegalArgumentException("Возраст не может быть больше 120 и меньше 0");
-        }
         this.name = name;
         this.surname = surname;
         this.age = age;
     }
 
     public Person(String name, String surname) {
-        if (name == null || surname == null) {
-            throw new IllegalArgumentException("Введите имя и фамилию");
-        }
         this.name = name;
         this.surname = surname;
     }
