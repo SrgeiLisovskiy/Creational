@@ -6,9 +6,6 @@ public class PersonBuilder {
     private boolean ageEmpty = false;
 
     public PersonBuilder setName(String name) {
-        if (name == null) {
-            throw new IllegalArgumentException("Введите имя");
-        }
         this.name = name;
         return this;
     }
