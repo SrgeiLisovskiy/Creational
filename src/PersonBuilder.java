@@ -31,7 +31,7 @@ public class PersonBuilder {
 
     public Person build() {
         if (name == null || surname == null) {
-            throw new IllegalArgumentException("Введите имя и фамилию");
+            throw new IllegalStateException("Введите имя и фамилию");
         }
         Person person;
         if (ageEmpty) {
